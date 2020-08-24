@@ -9,6 +9,8 @@ How do I run this program？
 4. $ cd unpack
 5. $ frida -U -f <packageName> -l dex-dump.js --no-pause
 
+！！！！记得修改 dex-dump.js 中的 processName 为你的 processesName。
+
 then print:
   [*] DexSize :3163740
   [*] dump Dex success, saved path:  /data/data/<package>/3163740.dex
