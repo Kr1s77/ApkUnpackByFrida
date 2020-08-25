@@ -1,7 +1,7 @@
 ApkUnpackByFrida(基于 Frida 的脱壳工具)
-================
+=====================================
 
-How do I run this program？
+How do I run this program？(you can run it without pc.)
 
 1. run frida server.
 2. adb forward android device port.
