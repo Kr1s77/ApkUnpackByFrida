@@ -26,20 +26,20 @@ function getAndroidVersion(){
 function getFunctionPointer(version){
     var functionPointer = undefined;
     if (version > 4){  // android version 5 and later.
-        functionPointer = findMemoryWriteExport(functionPointer, 'OpenMemory', 'libart.so');
+        functionPointer = findMemoryWriterExport(functionPointer, 'OpenMemory', 'libart.so');
         if (functionPointer === undefined){
-            functionPointer = findMemoryWriteExport(functionPointer, 'OpenCommon', 'libart.so');
+            functionPointer = findMemoryWriterExport(functionPointer, 'OpenCommon', 'libart.so');
         }
     }else if (version === 4){  // android 4 different 5 or later.
-        functionPointer = findMemoryWriteExport(functionPointer, 'dexFileParse', 'libdvm.so');
+        functionPointer = findMemoryWriterExport(functionPointer, 'dexFileParse', 'libdvm.so');
         if (functionPointer === undefined){
-            functionPointer = findMemoryWriteExport(functionPointer, 'OpenMemory', 'libart.so');
+            functionPointer = findMemoryWriterExport(functionPointer, 'OpenMemory', 'libart.so');
         }
     }
     return functionPointer;
 }
 
-function findMemoryWriteExport(functionPtr, exportFunctionIndex, hexFileName){
+function findMemoryWriterExport(functionPtr, exportFunctionIndex, hexFileName){
      var artExports =  Module.enumerateExportsSync(hexFileName);
      for (var i = 0; i < artExports.length; i++){
         if (artExports[i].name.indexOf(exportFunctionIndex) !== -1){
