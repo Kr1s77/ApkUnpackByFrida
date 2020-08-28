@@ -1,5 +1,7 @@
-ApkUnpackByFrida(基于 Frida 的脱壳工具)
+Apk Unpack By Frida(基于 Frida 的脱壳工具)
 =====================================
+
+DOWNLOAD AND INSTALL FRIDA: https://github.com/frida/frida
 
 How do I run this program？(you can run it without pc.)
 
@@ -26,7 +28,7 @@ A modified version based on this repository: https://github.com/GuoQiang1993/Fri
             -enMemory 的方法来进行 dex dump，目前我用的最爽的也就是这种方法，速度比内存搜索的方
             式快很多。
 
-测试环境：
+test environment：
            Android Version: 7.
            其他版本没有测试，请自行测试其他 Andorid 版本。
 
