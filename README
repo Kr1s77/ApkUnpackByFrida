@@ -21,11 +21,11 @@ then print:
 A modified version based on this repository: https://github.com/GuoQiang1993/Frida-Apk-Unpack
 
 原理解析：
-            Frida 动态脱壳，是破解第一代、第二代壳，这种方式是使用搜索内存的方法，匹配对应的点，
-            然后从内存中将 dex 文件截取保存下来，目前使用 Frida 破解总共有两种，第一种是内存搜
-            索，第二种是通过 Hook 的方式，比如去 Hook openMemory 方法，当程序启动时，加壳的 a
-            -pp 必须要经过 openMemory 方法，将 dex 放入内存给手机使用，我们就可以通过 hook op
-            -enMemory 的方法来进行 dex dump，目前我用的最爽的也就是这种方法，速度比内存搜索的方
+            Frida 动态脱壳，是破解第一代、第二代壳的主要方式，这种方式是使用搜索内存的方法，匹配
+            对应的点，然后从内存中将 dex 文件截取保存下来，目前使用 Frida 破解总共有两种，第一种
+            是内存搜索，第二种是通过 Hook 的方式，比如去 Hook openMemory 方法，当程序启动时，加
+            壳的 app 必须要经过 openMemory 方法，将 dex 放入内存给手机使用，我们就可以通过 hook
+            openMemory 的方法来进行 dex dump，目前我用的最爽的也就是这种方法，速度比内存搜索的方
             式快很多。
 
 test environment：
