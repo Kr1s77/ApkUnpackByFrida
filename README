@@ -33,4 +33,7 @@ test environment：
            其他版本没有测试，请自行测试其他 Andorid 版本。
 
 不是可以脱所有的壳，遇到加壳可以使用此项目测试。
+
+
+Frida RPC Thread Example >>> https://github.com/Kr1s77/ApkUnpackByFrida/issues/2#issue-689093524
   
